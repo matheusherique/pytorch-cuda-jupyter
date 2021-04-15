@@ -8,6 +8,7 @@ services:
           devices:
             - capabilities: [gpu]
     command: "jupyter notebook --ip 0.0.0.0 --no-browser --allow-root"
+    user: ${CURRENT_UID}
     ports: 
       - 8888:8888
     volumes: 
