@@ -1,0 +1,7 @@
+pandas
+Augmentor 
+opencv-python
+torchsummary
+pywick
+captum
+torch-lr-finder

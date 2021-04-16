@@ -2,13 +2,13 @@ version: '3'
 services:
   pytorch:
     build: .
+    user: ${CURRENT_UID}
     deploy:
       resources:
         reservations:
           devices:
             - capabilities: [gpu]
-    command: "jupyter notebook --ip 0.0.0.0 --no-browser --allow-root"
-    user: ${CURRENT_UID}
+    command: "jupyter notebook --notebook-dir=/workspace --ip 0.0.0.0 --no-browser --allow-root"
     ports: 
       - 8888:8888
     volumes: 
